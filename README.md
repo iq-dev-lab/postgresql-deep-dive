@@ -223,7 +223,7 @@ services:
     environment:
       POSTGRES_DB: pg_deep_dive
       POSTGRES_PASSWORD: postgres
-      POSTGRES_INITDB_ARGS: "--encoding=UTF8 --locale=ko_KR.UTF-8"
+      POSTGRES_INITDB_ARGS: "--encoding=UTF8 --locale=C.UTF-8"
     volumes:
       - ./init.sql:/docker-entrypoint-initdb.d/init.sql
       - pgdata:/var/lib/postgresql/data
@@ -239,6 +239,10 @@ services:
       -c log_autovacuum_min_duration=0
       -c track_io_timing=on
       -c track_functions=all
+      -c shared_preload_libraries='pg_stat_statements,auto_explain'
+      -c pg_stat_statements.max=10000
+      -c pg_stat_statements.track=all
+      -c auto_explain.log_min_duration=1000
 
   pgadmin:
     image: dpage/pgadmin4:latest
