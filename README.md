@@ -422,6 +422,6 @@ Made with ❤️ by [Dev Book Lab](https://github.com/dev-book-lab)
 
 <br/>
 
-*"PostgreSQL도 SQL 쓰면 되는 거 아닌가 — 와 — Dead Tuple이 왜 생기고 VACUUM이 어떻게 회수하는지 아는 것은 다르다"*
+**"PostgreSQL도 SQL 쓰면 되는 거 아닌가 — 와 — Dead Tuple이 왜 생기고 VACUUM이 어떻게 회수하는지 아는 것은 다르다"**
 
 </div>
